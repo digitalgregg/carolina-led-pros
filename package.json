@@ -1,8 +1,8 @@
 {
-  "name": "charlotte-led-pros",
+  "name": "Carolina-led-pros",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/digitalgregg/charlotte-led-pros.git",
+  "repository": "https://github.com/digitalgregg/Carolina-led-pros.git",
   "author": "Digital Gregg <greggmckee3@gmail.com>",
   "license": "MIT",
   "scripts": {

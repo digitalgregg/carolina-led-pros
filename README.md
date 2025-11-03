@@ -1,1 +1,1 @@
-This is the Charlotte repo 2025
+This is the Carolina repo 2025
