@@ -1,0 +1,16 @@
+{
+  "name": "charlotte-led-pros",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/digitalgregg/charlotte-led-pros.git",
+  "author": "Digital Gregg <greggmckee3@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rstic dev",
+    "build": "rstic build -b static"
+  },
+  "dependencies": {
+    "purgecss-cli": "^0.7.0",
+    "rstic": "0.0.14-beta"
+  }
+}

@@ -1,0 +1,138 @@
+/* Scope everything under .svc- to avoid collisions */
+.svc-wrap {
+  background: #102d71; /* light sage-gray like screenshot */
+
+  padding: 20px 20px;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: #212529;
+  border-radius: 1.5rem;
+}
+
+.svc-inner {
+  width: 100%;
+}
+
+.svc-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  margin: 18px 0 30px;
+}
+
+/* Layout */
+.svc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .svc-grid {
+    grid-template-columns: 360px 1fr; /* list / map */
+    gap: 60px;
+  }
+}
+@media (min-width: 900px) {
+  .svc-wrap {
+    padding: 36px 58px;
+  }
+  .svc-title {
+    margin: 18px 0 80px;
+    font-size: 48px;
+    line-height: 1.15;
+    font-weight: 500;
+  }
+}
+
+/* List */
+.svc-list {
+  display: grid;
+  gap: 18px;
+}
+
+.svc-item {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid #eef0f2;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+  color: #2b3440;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.04s ease, box-shadow 0.2s ease, background 0.15s ease;
+}
+
+.svc-item:hover {
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.09);
+}
+
+.svc-item:active {
+  transform: translateY(1px);
+}
+
+.svc-item--active {
+  background: #e6daff; /* deep navy */
+  border-color: #e6daff;
+  color: #764DCB;
+  box-shadow: 0 10px 24px rgba(20, 59, 102, 0.25);
+}
+
+/* Icon circle + SVG */
+.svc-pin {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #764DCB; /* green */
+  color: #ffffff;
+  line-height: 1;
+}
+
+.svc-item--active .svc-pin,
+.svc-pin--invert {
+  background: transparent;
+  border: 1px solid #764DCB;
+  color: #764DCB;
+}
+.svc-item--active .svc-pin--invert path {
+  fill: #764DCB;
+}
+.svc-item-text {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+
+/* Map card */
+.svc-map-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(16, 24, 40, 0.08);
+  border: 1px solid #eef0f2;
+}
+
+.svc-map-frame {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* Google maps iframe */
+.svc-map-iframe {
+  display: block;
+  width: 100%;
+  height: 490px;
+  border: 0;
+  border-radius: 18px;
+}

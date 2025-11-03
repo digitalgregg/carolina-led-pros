@@ -1,0 +1,223 @@
+<css src="./hero.scss" />
+<style>
+  .hero-2nd_grid {
+    display: grid !important;
+    grid-template-columns: 1.5fr 1fr !important;
+    align-items: stretch !important;
+  }
+
+  .hero-2nd_visual,
+  .hero-2nd_images {
+    display: flex !important;
+    align-items: center !important;
+    max-height: 600px !important;
+    padding-top: 0 !important;
+  }
+
+  .ba_main,
+  .hero-2nd_images-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slider-image,
+  .hero-2nd_image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .chip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: #111;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    white-space: nowrap;
+  }
+
+  .chip.top-right {
+    top: 16px;
+    right: 16px;
+  }
+
+  .chip.bottom-left {
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .chip.rebate {
+    background: #EAF6FF;
+    border: 1px solid #bfdaca;
+  }
+
+  .chip.savings {
+    background: #fff;
+    border: 1px solid #eee;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-2nd_grid {
+      grid-template-columns: 1.2fr 1fr !important;
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-2nd_grid {
+      grid-template-columns: 1fr !important;
+      gap: 2rem;
+    }
+
+    .hero-2nd_visual {
+      order: 2;
+    }
+
+    .hero-2nd_images {
+      order: 1;
+    }
+
+    .single-solution-hero .hero-2nd_visual {
+      border-radius: 1rem;
+      padding-top: 75%;
+    }
+
+    .chip {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+
+    .chip.top-right {
+      top: 12px;
+      right: 12px;
+    }
+
+    .chip.bottom-left {
+      bottom: 12px;
+      left: 12px;
+    }
+
+    .hero-2nd_images {
+      min-height: inherit !important;
+      padding-top: 0 !important;
+    }
+
+    .hero-2nd_images-wrap {
+      padding-top: 0 !important;
+    }
+
+    .hero-2nd_visual {
+      padding-top: 0 !important;
+    }
+
+    .hero-2nd_images.on-desktop {
+      display: none !important;
+    }
+
+    .single-solution-hero .hero-2nd_grid {
+      min-height: auto !important;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .hero-2nd_images {
+      min-height: inherit !important;
+    }
+
+    .hero-2nd_images.on-desktop {
+      display: none !important;
+    }
+  }
+</style>
+<div class="single-solution-hero">
+  <section class="section_hero-2nd">
+    <div class="padding-global padding-section-large">
+      <div class="content-wrap">
+        <div class="hero-2nd_header ">
+          <div class="hero-2nd_title">
+            <h1 class="text-5xl">LED Conversions That Cut Your Energy Costs Fast</h1>
+          </div>
+          <div class="hero-2nd_content">
+            <div class="text-lg text-color-secondary">
+              Upgrade aging fixtures to high-efficiency LEDs-lower bills, brighten every space, and see payback in
+              months.
+            </div>
+            <div class="hero-2nd_buttons-wrap">
+              <div class="button-wrapper">
+                <a href="/contact" class="button is-primary w-inline-block">
+                  <div class="button-text-wrap">
+                    <div class="button-text is-firts">Get My Free Consultation</div>
+                    <div class="button-text is-second">Free Consultation</div>
+                    <div class="button-shadow-up"></div>
+                    <div class="button-shadow-down"></div>
+                  </div>
+                  <img loading="lazy" src="/images/6776d41eecd929e7c8296552_arrow%20right.svg" alt=""
+                    class="button-icon" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-2nd_grid">
+          <div class="hero-2nd_visual ">
+            <div class="ba_main">
+              <div class="ba_main_container">
+                <div class="image-container">
+
+
+                  <img class="image-before slider-image" src="/images/before.jpeg"
+                    alt="Before LED conversion showing old lighting fixtures" />
+                  <img class="image-after slider-image" src="/images/after.jpeg"
+                    alt="After LED conversion at an indoor facility with evenly lit high-bay fixtures" />
+                </div>
+
+                <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown"
+                  class="slider" />
+                <div class="slider-line" aria-hidden="true"></div>
+                <div class="slider-button" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none"></rect>
+                    <line x1="128" y1="40" x2="128" y2="216" fill="none" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="16"></line>
+                    <line x1="96" y1="128" x2="16" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="16"></line>
+                    <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="16"></polyline>
+                    <line x1="160" y1="128" x2="240" y2="128" fill="none" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="16"></line>
+                    <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="16"></polyline>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-2nd_images on-desktop">
+            <div class="hero-2nd_images-wrap">
+              <div class="hero-2nd_image">
+                <img src="/images/led-conver.jpeg" loading="lazy" alt="LED Conversion Graphics" class="img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

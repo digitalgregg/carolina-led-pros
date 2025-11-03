@@ -1,0 +1,1033 @@
+<css src="./header.scss" />
+
+<div class="global-styles w-embed">
+  <style>
+    /* CSS Fluid Responsive */
+
+    html {
+      font-size: calc(0.5991091314031181rem + 0.4454342984409799vw);
+      scroll-behavior: smooth;
+    }
+
+    @media screen and (max-width: 1440px) {
+      html {
+        font-size: calc(0.5991091314031181rem + 0.4454342984409799vw);
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      html {
+        font-size: calc(0.44698660714285715rem + 0.8928571428571428vw);
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      html {
+        font-size: calc(0.6671006944444444rem + 0.6944444444444444vw);
+      }
+    }
+
+    @media screen and (max-width: 479px) {
+      html {
+        font-size: calc(0.7494769874476988rem + 0.8368200836820083vw);
+      }
+    }
+
+    /* Make text look crisper and more legible in all browsers */
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Focus state style for keyboard navigation for the focusable elements */
+    *[tabindex]:focus-visible,
+    input[type="file"]:focus-visible {
+      outline: 0.125rem solid #4d65ff;
+      outline-offset: 0.125rem;
+    }
+
+    /* Set color style to inherit */
+    .inherit-color * {
+      color: inherit;
+    }
+
+    /* Get rid of top margin on first element in any rich text element */
+    .w-richtext> :not(div):first-child,
+    .w-richtext>div:first-child> :first-child {
+      margin-top: 0 !important;
+    }
+
+    /* Get rid of bottom margin on last element in any rich text element */
+    .w-richtext> :last-child,
+    .w-richtext ol li:last-child,
+    .w-richtext ul li:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    /* Make sure containers never lose their center alignment */
+    .container-medium,
+    .container-small,
+    .container-large {
+      margin-right: auto !important;
+      margin-left: auto !important;
+    }
+
+    /* Apply "..." after 3 lines of text */
+    .text-style-3lines {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    /* Apply "..." after 2 lines of text */
+    .text-style-2lines {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    /* Adds inline flex display */
+    .display-inlineflex {
+      display: inline-flex;
+    }
+
+    /* These classes are never overwritten */
+    .hide {
+      display: none !important;
+    }
+
+    @media screen and (max-width: 991px) {
+
+      .hide,
+      .hide-tablet {
+        display: none !important;
+      }
+
+      .nav_link-dropdown.w--open {
+        z-index: 99;
+        position: static;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .hide-mobile-landscape {
+        display: none !important;
+      }
+    }
+
+    @media screen and (max-width: 479px) {
+      .hide-mobile {
+        display: none !important;
+      }
+
+    }
+
+    .margin-0 {
+      margin: 0rem !important;
+    }
+
+    .padding-0 {
+      padding: 0rem !important;
+    }
+
+    .spacing-clean {
+      padding: 0rem !important;
+      margin: 0rem !important;
+    }
+
+    .margin-top {
+      margin-right: 0rem !important;
+      margin-bottom: 0rem !important;
+      margin-left: 0rem !important;
+    }
+
+    .padding-top {
+      padding-right: 0rem !important;
+      padding-bottom: 0rem !important;
+      padding-left: 0rem !important;
+    }
+
+    .margin-right {
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important;
+      margin-left: 0rem !important;
+    }
+
+    .padding-right {
+      padding-top: 0rem !important;
+      padding-bottom: 0rem !important;
+      padding-left: 0rem !important;
+    }
+
+    .margin-bottom {
+      margin-top: 0rem !important;
+      margin-right: 0rem !important;
+      margin-left: 0rem !important;
+    }
+
+    .padding-bottom {
+      padding-top: 0rem !important;
+      padding-right: 0rem !important;
+      padding-left: 0rem !important;
+    }
+
+    .margin-left {
+      margin-top: 0rem !important;
+      margin-right: 0rem !important;
+      margin-bottom: 0rem !important;
+    }
+
+    .padding-left {
+      padding-top: 0rem !important;
+      padding-right: 0rem !important;
+      padding-bottom: 0rem !important;
+    }
+
+    .margin-horizontal {
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important;
+    }
+
+    .padding-horizontal {
+      padding-top: 0rem !important;
+      padding-bottom: 0rem !important;
+    }
+
+    .margin-vertical {
+      margin-right: 0rem !important;
+      margin-left: 0rem !important;
+    }
+
+    .padding-vertical {
+      padding-right: 0rem !important;
+      padding-left: 0rem !important;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .sidebar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .sidebar {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+
+    /* Smooth scroll offset for fixed navbar */
+    .section_hero,
+    .section_goals,
+    .section_features,
+    .section_success,
+    .section_performance,
+    .section_testimonials,
+    .section_blogs {
+      scroll-margin-top: 80px;
+    }
+
+    .header-strip {
+      background-color: #091B47;
+      border-radius: 1rem 1rem 0 0;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
+    .header-strip .links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2rem;
+    }
+
+    .links .mail,
+    .links .phn {
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .links .icon,
+    .links .icon {
+      margin-right: 0.5rem;
+    }
+
+    /* Dropdown */
+    .w-dropdown {
+      text-align: left;
+      z-index: 900;
+      margin-left: auto;
+      margin-right: auto;
+      display: inline-block;
+      position: relative;
+    }
+
+    .w-dropdown-btn,
+    .w-dropdown-toggle,
+    .w-dropdown-link {
+      vertical-align: top;
+      color: #222;
+      text-align: left;
+      white-space: nowrap;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .w-dropdown-toggle {
+      -webkit-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      padding-right: 40px;
+      display: inline-block;
+    }
+
+    .w-dropdown-toggle:focus {
+      outline: 0;
+    }
+
+    .w-icon-dropdown-toggle {
+      width: 1em;
+      height: 1em;
+      margin: auto 20px auto auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    .w-nav[data-collapse="all"] .w-nav-button,
+    .w--nav-dropdown-open,
+    .w--nav-dropdown-toggle-open {
+      display: block;
+    }
+
+    .w--nav-dropdown-list-open {
+      position: static;
+    }
+
+    .nav_links.is-dropdown {
+      grid-column-gap: 0.5rem;
+      grid-row-gap: 0.5rem;
+      justify-content: flex-start;
+      align-items: center;
+      display: flex;
+    }
+
+    .w-dropdown-list {
+      display: none !important;
+      position: absolute;
+      z-index: 9999;
+    }
+
+    .w-dropdown-list.w--open {
+      display: block !important;
+    }
+
+    .w-dropdown-link {
+      color: #222;
+      padding: 10px 20px;
+      display: block;
+    }
+
+    .w-dropdown-link.w--current {
+      color: #0082f3;
+    }
+
+    .w-dropdown-link:focus {
+      outline: 0;
+    }
+
+    .w-icon-arrow-down:before,
+    .w-icon-dropdown-toggle:before {
+      content: "";
+    }
+
+    [class^="w-icon-"],
+    [class*=" w-icon-"] {
+      speak: none;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      font-family: webflow-icons !important;
+    }
+
+    .nav_dropdown {
+      margin-left: 0;
+      margin-right: 0;
+      position: static;
+    }
+
+    .nav_link-icon {
+      margin: 0;
+      position: relative;
+    }
+
+    .nav_link-dropdown {
+      border-radius: 0.5rem;
+    }
+
+    .nav_link-dropdown.w--open {
+      background-color: #0000;
+      top: 100%;
+      bottom: auto;
+    }
+
+    .nav_dropdown-wrap {
+      height: auto;
+      overflow: clip;
+    }
+
+    .nav_dropdown-content {
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      background-color: #ffffff;
+      color: #6a6a6a;
+      border-radius: 1.5rem;
+      grid-template-rows: auto;
+      grid-auto-columns: 1fr;
+      padding: 1.25rem;
+      display: grid;
+    }
+
+    .nav_dropdown-column {
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      flex-flow: column;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+      grid-auto-columns: 1fr;
+      justify-content: flex-start;
+      place-items: flex-start start;
+      display: flex;
+    }
+
+    .nav_dropdown-link {
+      color: #131313;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5;
+      transition: opacity 0.3s;
+    }
+
+    .nav_dropdown-link:hover {
+      opacity: 100;
+    }
+
+    .nav_dropdown-link.w--current {
+      opacity: 1;
+      color: #E6DAFF;
+      font-weight: 600;
+    }
+
+    .nav-button-outline {
+      background: transparent !important;
+      border: 1px solid #764DCB !important;
+      color: #764DCB !important;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav_dropdown-content {
+      grid-template-columns: auto;
+    }
+
+    .nav_dropdown-column a {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .nav_dropdown-column {
+      width: 100%;
+    }
+
+
+    .nav_dropdown-column a:hover,
+    .nav_dropdown-link.w--current {
+      background: #E6DAFF !important;
+      color: #764DCB;
+      font-weight: 700;
+    }
+
+    .nav_dropdown-wrap {
+      width: 320px !important;
+    }
+
+    .w-dropdown-list {
+      box-shadow: none !important;
+    }
+
+    .nav_dropdown-content {
+      width: auto;
+      padding: 1.25rem
+    }
+
+    .nav_dropdown-wrap {
+      box-shadow: 0px 0px 10px 0px #0000001A;
+      border-radius: 30px;
+    }
+
+    .slider.w-slider .w-slider-aria-label {
+      display: none;
+    }
+
+    .navbar_logo-link {
+      position: relative;
+      display: inline-block;
+    }
+
+    .navbar_logo,
+    .navbar_header_logo_hovered {
+      transition: opacity 0.3s ease;
+      display: block;
+    }
+
+    .navbar_header_logo_hovered {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+
+    .navbar_logo-link:hover .navbar_logo {
+      opacity: 0;
+    }
+
+    .navbar_logo-link:hover .navbar_header_logo_hovered {
+      opacity: 1;
+    }
+
+
+    .nav_links:hover .text-block,
+    .nav_links:hover .w-icon-dropdown-toggle,
+    a.nav_links.w-nav-link.w--current .text-block {
+      color: #764DCB;
+    }
+
+    .on-desktop {
+      display: block !important;
+    }
+
+    .on-mobile {
+      display: none !important;
+    }
+
+    .header-strip.padding-global .on-mobile,
+    .header-strip.padding-global .on-desktop {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-strip.padding-global a {
+      padding: 10px;
+      font-weight: bold;
+      padding-left: 0;
+    }
+
+    .header-strip.padding-global svg {
+      margin-bottom: -5px;
+    }
+
+    .header-section {
+      position: fixed;
+      width: 98.5%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 999;
+
+    }
+
+    .header-section .navbar {
+      border-bottom: 2px solid #efeeeb;
+    }
+
+    section.svc-wrap,
+    .home-sections,
+    main.main-wrapper,
+    .our-company-hero,
+    .blog-section,
+    .single-solution-hero {
+      margin-top: 135px;
+    }
+
+    .finance_slide.w-slide {
+      height: 100%;
+      min-height: 450px;
+    }
+
+    .finance_slide.w-slide .finance_card {
+      height: 100%;
+      min-height: 450px;
+    }
+
+    .finance_card-badge .text-base {
+      color: #111111;
+    }
+
+    .team_card-visual .img-wrapper {
+      min-height: auto !important;
+    }
+
+    .nav_links.active {
+      color: #114171;
+      font-weight: 700;
+    }
+
+    .nav_dropdown-link.active {
+      color: #114171;
+      font-weight: 700;
+    }
+
+    .text-left {
+      text-align: left !important;
+    }
+
+    @media screen and (max-width: 767px) {
+      .nav_link-dropdown {
+        width: 100%;
+      }
+
+      .nav_dropdown {
+        width: 100%;
+      }
+
+      .nav_dropdown-wrap {
+        width: 100% !important;
+      }
+
+      .navbar_list {
+        padding: 0 !important;
+      }
+
+      .nav_dropdown-content {
+        border-radius: 0 !important;
+      }
+
+      .nav_dropdown-wrap {
+        border-radius: 0;
+      }
+
+      .nav_links .text-block {
+        padding: 10px;
+        padding-left: 20px;
+      }
+
+      .single-solution-hero .hero-2nd_image img {
+        width: 80% !important;
+        height: auto !important;
+        margin: 0 auto;
+        top: 14% !important;
+      }
+
+      .padding-section-large,
+      .padding-global,
+      .success_scroll-content .success_scroll-card,
+      .ledcalc-card {
+        padding: 20px !important;
+      }
+
+      section#case_study {
+        padding: 20px !important;
+        margin-top: -7px !important;
+      }
+
+      section#brandSection {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .header-strip.padding-global {
+        padding: 10px !important;
+      }
+
+      .on-desktop {
+        display: none !important;
+      }
+
+      .on-mobile {
+        display: block !important;
+      }
+
+      a.button.is-primary.w-button.on-mobile {
+        height: auto !important;
+        min-height: auto;
+        padding: 10px 15px;
+      }
+
+
+      .success_card-btns-wrap {
+        display: block !important;
+        text-align: center;
+      }
+
+      .success_card-btns-wrap .button-wrapper a {
+        display: flex;
+        width: 100%;
+        justify-content: center !important;
+        margin-top: 10px !important;
+      }
+
+      .success_card-btns-wrap .button-wrapper {
+        align-items: center;
+        justify-content: center;
+        display: block;
+      }
+
+      .success_card-btns-wrap .button-wrapper a img {
+        display: none;
+      }
+
+      section#blogs .content-wrap .blogs_header {
+        display: block;
+      }
+
+      .blogs_header .button-wrapper a img {
+        display: none;
+      }
+
+      .blogs_header .button-wrapper a {
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      section.svc-wrap,
+      .home-sections,
+      main.main-wrapper,
+      .our-company-hero,
+      .blog-section,
+      .single-solution-hero {
+        margin-top: 150px;
+      }
+
+      .header-section {
+        width: 94.5%;
+      }
+
+
+      .button-wrapper {
+        display: block;
+        width: 100%;
+      }
+
+      .button-wrapper a img {
+        display: none !important;
+      }
+
+      .button-wrapper a {
+        width: 100% !important;
+      }
+
+      .hero_buttons-wrap {
+        width: 100%;
+      }
+
+      .performance_card h3 {
+        font-size: 24px !important;
+      }
+
+      .content-wrap {
+        padding-top: 1rem !important;
+      }
+
+      .navbar_logo-link:hover .navbar_logo {
+        opacity: 1;
+      }
+
+    }
+
+    @media screen and (max-width: 479px) {
+      .text-6xl {
+        font-size: 2.325rem !important;
+      }
+
+      .text-5xl {
+        font-size: 2rem !important;
+      }
+
+      .about-hero_content-bottom {
+        grid-row-gap: 1rem !important;
+        ;
+        border-radius: 1.25rem !important;
+        ;
+        grid-template-columns: 1fr 1fr !important;
+        padding: 1rem !important;
+        ;
+      }
+
+      .about-hero_visual .img-wrapper {
+        min-height: 550px !important;
+        max-height: auto !important;
+      }
+
+      .about-hero_visual .video-container {
+        min-height: 550px !important;
+        max-height: auto !important;
+      }
+
+      .about-hero_visual .hero-video {
+        min-height: 550px !important;
+        max-height: auto !important;
+      }
+
+      .content-wrap {
+        grid-row-gap: 1rem !important;
+      }
+
+      .hero-2nd_buttons-wrap {
+        display: block !important;
+        width: 100% !important;
+      }
+
+      .performance_card h3 {
+        font-size: 24px !important;
+      }
+
+      .content-wrap {
+        padding-top: 1rem !important;
+      }
+
+      .nav_wrap a.button.is-primary.w-button.on-mobile {
+        font-size: 13px;
+      }
+
+      .navbar_logo-link:hover .navbar_logo {
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 4560px) {
+      .img-wrapper {
+        min-height: 1750px !important;
+        max-height: auto !important;
+      }
+
+      .video-container {
+        min-height: 1750px !important;
+        max-height: auto !important;
+      }
+
+      .hero-video {
+        min-height: 1750px !important;
+        max-height: auto !important;
+      }
+
+
+    }
+
+    @media screen and (max-width: 3560px) {
+      .img-wrapper {
+        min-height: 1450px !important;
+        max-height: auto !important;
+      }
+
+      .video-container {
+        min-height: 1450px !important;
+        max-height: auto !important;
+      }
+
+      .hero-video {
+        min-height: 1450px !important;
+        max-height: auto !important;
+      }
+    }
+
+    @media screen and (max-width: 2560px) {
+      .img-wrapper {
+        min-height: 1050px !important;
+        max-height: auto !important;
+      }
+
+      .video-container {
+        min-height: 1050px !important;
+        max-height: auto !important;
+      }
+
+      .hero-video {
+        min-height: 1050px !important;
+        max-height: auto !important;
+      }
+    }
+
+    @media screen and (max-width: 1920px) {
+      .img-wrapper {
+        min-height: 1050px !important;
+        max-height: auto !important;
+      }
+
+      .video-container {
+        min-height: 1050px !important;
+        max-height: auto !important;
+      }
+
+      .hero-video {
+        min-height: 1050px !important;
+        max-height: auto !important;
+      }
+    }
+
+    @media (min-width: 1500px) {
+
+      section.svc-wrap,
+      .home-sections,
+      main.main-wrapper,
+      .our-company-hero,
+      .blog-section,
+      .single-solution-hero {
+        margin-top: 150px;
+      }
+
+
+    }
+  </style>
+</div>
+
+<div class="header-section">
+  <div data-w-id="a7f12364-36b4-6d39-8f07-94ebb1a5e2f8" data-animation="default" data-collapse="medium"
+    data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+    <div class="header-strip padding-global">
+      <div class="links">
+        <div class="mail">
+          <div class="on-desktop">
+            <svg class="icon" width="20" height="20" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 5L6.68477 7.93773C8.5962 9.02075 9.4038 9.02075 11.3152 7.93773L16.5 5" stroke="#fff"
+                stroke-width="1.125" stroke-linejoin="round" />
+              <path
+                d="M1.51183 10.6067C1.56086 12.9059 1.58537 14.0554 2.43372 14.9071C3.28206 15.7586 4.46275 15.7882 6.82412 15.8476C8.27948 15.8842 9.72053 15.8842 11.1759 15.8476C13.5373 15.7882 14.7179 15.7586 15.5663 14.9071C16.4147 14.0554 16.4392 12.9059 16.4881 10.6067C16.504 9.86743 16.504 9.13258 16.4881 8.3933C16.4392 6.09415 16.4147 4.94457 15.5663 4.093C14.7179 3.24142 13.5373 3.21176 11.1759 3.15243C9.72053 3.11586 8.27947 3.11586 6.82411 3.15242C4.46275 3.21175 3.28206 3.24141 2.43371 4.09299C1.58537 4.94456 1.56085 6.09414 1.51182 8.3933C1.49605 9.13258 1.49606 9.86743 1.51183 10.6067Z"
+                stroke="#fff" stroke-width="1.125" stroke-linejoin="round" />
+            </svg>
+            <a href="mailto:sales@charlotteledpros.com" target="_blank">sales@charlotteledpros.com</a>
+          </div>
+          <div class="on-mobile">
+            <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.86869 4.78417L6.5667 4.10469C6.36924 3.66041 6.27051 3.43826 6.12286 3.26826C5.93781 3.05521 5.6966 2.89846 5.42676 2.81589C5.21144 2.75 4.96834 2.75 4.48216 2.75C3.77093 2.75 3.41532 2.75 3.1168 2.88672C2.76515 3.04777 2.44758 3.39746 2.32105 3.76295C2.21363 4.07322 2.2444 4.39207 2.30593 5.02978C2.96093 11.8176 6.68236 15.5391 13.4702 16.194C14.1079 16.2556 14.4268 16.2864 14.737 16.179C15.1026 16.0525 15.4522 15.7348 15.6133 15.3832C15.75 15.0846 15.75 14.7291 15.75 14.0178C15.75 13.5316 15.75 13.2885 15.6841 13.0732C15.6015 12.8034 15.4448 12.5622 15.2317 12.3771C15.0618 12.2295 14.8396 12.1308 14.3953 11.9333L13.7158 11.6313C13.2347 11.4174 12.9941 11.3106 12.7497 11.2873C12.5157 11.265 12.2798 11.2979 12.0608 11.3832C11.832 11.4723 11.6298 11.6408 11.2252 11.9778C10.8226 12.3134 10.6213 12.4812 10.3753 12.571C10.1572 12.6507 9.86892 12.6802 9.63927 12.6463C9.38014 12.6082 9.18177 12.5022 8.78494 12.2901C7.55044 11.6304 6.86965 10.9496 6.2099 9.71502C5.99785 9.31827 5.89183 9.11983 5.85365 8.86077C5.8198 8.63105 5.84931 8.34275 5.92897 8.12472C6.01884 7.87871 6.18661 7.67739 6.52214 7.27475C6.85921 6.87026 7.02775 6.66802 7.11686 6.43918C7.20214 6.22021 7.23496 5.9843 7.21271 5.75036C7.18945 5.50589 7.08253 5.26532 6.86869 4.78417Z"
+                fill="#fff" />
+            </svg>
+
+            <a href="tel:(704) 507-2172" target="_blank">(704) 507-2172</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="padding-global is-navbar">
+      <div class="navbar_content">
+        <a href="/" class="navbar_logo-link w-nav-brand on-desktop"><img loading="lazy" src="images/logo.svg" alt=""
+            class="navbar_logo" /><img loading="lazy" src="images/logo-hovered.svg" alt=""
+            class="navbar_logo navbar_header_logo_hovered" /></a>
+        <a href="/" class="navbar_logo-link w-nav-brand on-mobile" style="margin-top: 10px;"><img loading="lazy"
+            src="images/logo.svg" alt="" class="navbar_logo" /></a>
+        <div class="nav_wrap">
+          <nav role="navigation" class="nav_mobile w-nav-menu">
+            <div class="navbar_list">
+              <div data-delay="0" data-hover="false" data-w-id="9f806c61-b28f-bd32-a859-a592a6170dbc"
+                class="nav_dropdown w-dropdown">
+                <div class="nav_links is-dropdown w-dropdown-toggle">
+                  <div class="text-block">Services</div>
+                  <div class="nav_link-icon w-icon-dropdown-toggle"></div>
+                </div>
+                <nav class="nav_link-dropdown w-dropdown-list">
+                  <div class="nav_dropdown-wrap">
+                    <div class="nav_dropdown-content">
+                      <div class="nav_dropdown-column">
+                        <a href="/led-conversion" class="nav_dropdown-link w-dropdown-link">LED Conversion</a>
+                        <a href="/lighting-installation" class="nav_dropdown-link w-dropdown-link">Lighting
+                          Installation</a>
+                        <a href="/hvac-mechanical" class="nav_dropdown-link w-dropdown-link">HVAC & Mechanical</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <div data-delay="0" data-hover="false" data-w-id="9f806c61-b28f-bd32-a859-a592a6170dbc"
+                class="nav_dropdown w-dropdown">
+                <div class="nav_links is-dropdown w-dropdown-toggle">
+                  <div class="text-block">Company</div>
+                  <div class="nav_link-icon w-icon-dropdown-toggle"></div>
+                </div>
+                <nav class="nav_link-dropdown w-dropdown-list">
+                  <div class="nav_dropdown-wrap">
+                    <div class="nav_dropdown-content">
+                      <div class="nav_dropdown-column">
+                        <a href="/our-company" class="nav_dropdown-link w-dropdown-link">About</a>
+                        <a href="/service-areas" class="nav_dropdown-link w-dropdown-link">Service Areas</a>
+                        <a href="/blog" class="nav_dropdown-link w-dropdown-link">Blog</a>
+                        <a href="/products" class="nav_dropdown-link w-dropdown-link">Our Products</a>
+                        <a href="/faq" class="nav_dropdown-link w-dropdown-link">FAQ</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <a href="/our-process" class="nav_links w-nav-link"><span class="text-block">Our Process</span></a>
+              <div data-delay="0" data-hover="false" data-w-id="9f806c61-b28f-bd32-a859-a592a6170dbc"
+                class="nav_dropdown w-dropdown">
+                <div class="nav_links is-dropdown w-dropdown-toggle">
+                  <div class="text-block">Rebates</div>
+                  <div class="nav_link-icon w-icon-dropdown-toggle"></div>
+                </div>
+                <nav class="nav_link-dropdown w-dropdown-list">
+                  <div class="nav_dropdown-wrap">
+                    <div class="nav_dropdown-content">
+                      <div class="nav_dropdown-column">
+                        <a href="/rebates" class="nav_dropdown-link w-dropdown-link">Utility Rebates</a>
+                        <a href="/epact-tax-savings" class="nav_dropdown-link w-dropdown-link">EPAct Tax Savings</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <a href="/results" class="nav_links w-nav-link"><span class="text-block">Results</span></a>
+            </div>
+          </nav>
+          <a href="/contact" class="button is-primary w-button on-mobile">
+            Get Free Consultation</a>
+        </div>
+        <div class="nav_buttons-wrap">
+          <div class="login-wrap hide-mobile-landscape">
+            <a href="tel:+704507-2172" class="button nav-button-outline"><svg class="icon" width="20" height="20"
+                viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.86894 4.78417L6.56694 4.10469C6.36948 3.66041 6.27075 3.43826 6.1231 3.26826C5.93805 3.05521 5.69684 2.89846 5.427 2.81589C5.21168 2.75 4.96859 2.75 4.4824 2.75C3.77117 2.75 3.41556 2.75 3.11704 2.88672C2.76539 3.04777 2.44782 3.39746 2.32129 3.76295C2.21387 4.07322 2.24465 4.39207 2.30618 5.02978C2.96117 11.8176 6.68261 15.5391 13.4704 16.194C14.1082 16.2556 14.4271 16.2864 14.7373 16.179C15.1028 16.0525 15.4525 15.7348 15.6136 15.3832C15.7502 15.0846 15.7502 14.7291 15.7502 14.0178C15.7502 13.5316 15.7502 13.2885 15.6844 13.0732C15.6018 12.8034 15.445 12.5622 15.232 12.3771C15.062 12.2295 14.8399 12.1308 14.3956 11.9333L13.7161 11.6313C13.2349 11.4174 12.9943 11.3106 12.7499 11.2873C12.5159 11.265 12.28 11.2979 12.061 11.3832C11.8322 11.4723 11.63 11.6408 11.2255 11.9778C10.8229 12.3134 10.6216 12.4812 10.3756 12.571C10.1575 12.6507 9.86916 12.6802 9.63951 12.6463C9.38039 12.6082 9.18201 12.5022 8.78519 12.2901C7.55069 11.6304 6.86989 10.9496 6.21014 9.71502C5.9981 9.31827 5.89208 9.11983 5.85389 8.86077C5.82005 8.63105 5.84955 8.34275 5.92922 8.12472C6.01908 7.87871 6.18685 7.67739 6.52238 7.27475C6.85946 6.87026 7.028 6.66802 7.11711 6.43918C7.20238 6.22021 7.23521 5.9843 7.21295 5.75036C7.1897 5.50589 7.08278 5.26532 6.86894 4.78417Z"
+                  fill="#764DCB" />
+              </svg>(704) 507-2172</a>
+            <a data-wf--primary-button--variant="base" data-w-id="92bfed55-38a6-ba5a-9cf3-eed76b268ae3" href="/contact"
+              class="button is-primary w-inline-block">
+              <div class="button-text-wrap">
+                <div class="button-text is-firts">Request a Free Consultation</div>
+                <div class="button-text is-second">Request</div>
+                <div class="button-shadow-up"></div>
+                <div class="button-shadow-down"></div>
+              </div>
+              <img loading="lazy" src="images/6776d41eecd929e7c8296552_arrow%20right.svg" alt="" class="button-icon" />
+            </a>
+          </div>
+          <div class="menu-button w-nav-button">
+            <div class="nav-button_component">
+              <div class="nav-button_line is-first"></div>
+              <div class="nav-button_line is-second"></div>
+              <div class="nav-button_line is-third"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
