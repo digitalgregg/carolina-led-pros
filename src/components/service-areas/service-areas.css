@@ -81,9 +81,9 @@
 }
 
 .svc-item--active {
-  background: #e6daff; /* deep navy */
-  border-color: #e6daff;
-  color: #764DCB;
+  background: #764DCB; 
+  border-color: #764DCB;
+  color: #fff;
   box-shadow: 0 10px 24px rgba(20, 59, 102, 0.25);
 }
 
@@ -102,11 +102,11 @@
 .svc-item--active .svc-pin,
 .svc-pin--invert {
   background: transparent;
-  border: 1px solid #764DCB;
-  color: #764DCB;
+  border: 1px solid #fff;
+  color: #fff;
 }
 .svc-item--active .svc-pin--invert path {
-  fill: #764DCB;
+  /* fill: #764DCB; */
 }
 .svc-item-text {
   font-size: 18px;

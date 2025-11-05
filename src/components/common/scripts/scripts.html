@@ -99,16 +99,16 @@
 
     function updateArrowStates() {
       if (currentIndex <= 0) {
-        leftArrow.style.opacity = '0.5';
-        leftArrow.style.pointerEvents = 'none';
+        leftArrow.style.opacity = '1';
+        leftArrow.style.pointerEvents = 'auto';
       } else {
         leftArrow.style.opacity = '1';
         leftArrow.style.pointerEvents = 'auto';
       }
 
       if (currentIndex >= totalSlides - slidesToShow) {
-        rightArrow.style.opacity = '0.5';
-        rightArrow.style.pointerEvents = 'none';
+        rightArrow.style.opacity = '1';
+        rightArrow.style.pointerEvents = 'auto';
       } else {
         rightArrow.style.opacity = '1';
         rightArrow.style.pointerEvents = 'auto';
