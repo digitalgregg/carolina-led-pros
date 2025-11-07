@@ -378,6 +378,35 @@
     color: #fff;
   }
 
+
+  .privacy-msg {
+    margin-top: 1rem;
+  }
+
+  .privacy-msg p {
+    margin: 0;
+  }
+
+  .privacy-msg a {
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: inherit;
+  }
+
+  .privacy-msg a:hover {
+    color: #764dcb;
+    text-decoration: underline;
+  }
+
+  .privacy-msg a svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
   /* ---- Responsiveness ---- */
   @media (max-width: 1024px) {
     .grid {
